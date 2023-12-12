@@ -27,38 +27,23 @@ Console.WriteLine("Done");
 
 public class Solution {
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode dummyHead = new();
+        ListNode currentNode = dummyHead;
+        int carry = 0;
 
-        return AddTwoNumbers(l1, l2, 0);
+        while(l1 != null || l2 != null || carry != 0 ){
+            int x = l1 is null ? 0 : l1.val;
+            int y = l2 is null ? 0 : l2.val;
+            int sum = x + y + carry;
 
-        ListNode AddTwoNumbers(ListNode l1, ListNode l2, int carry){
-            
-            int sum = l1.val + l2.val + carry;
-            int ones = sum % 10;
-            int tens = sum / 10;
+            carry = sum / 10;
 
-            Console.WriteLine($"Sum: {sum}, Ones: {ones}, Tens: {tens} L1 {l1.next is not null} L2 {l2.next is not null}");
-
-            if (tens == 0){
-                if(l1.next is null && l2.next is null)
-                    return new(ones);
-                if(l1.next is null)
-                    return new(ones, l2.next);
-                if(l2.next is null)
-                    return new(ones, l1.next);
-                else
-                    return new(ones, AddTwoNumbers(l1.next, l2.next, 0));
-            }
-            else{
-                if(l1.next is null && l2.next is null)
-                    return new(ones, new(tens));
-                if(l1.next is null)
-                    return new(ones, AddTwoNumbers(l2.next, new(tens), 0));
-                if(l2.next is null)
-                    return new(ones, AddTwoNumbers(l1.next, new(tens), 0));
-                else
-                    return new(ones, AddTwoNumbers(l1.next, l2.next, 1));
-            }
+            currentNode.next = new(sum % 10);
+            currentNode = currentNode.next;
+            l1 = l1?.next;
+            l2 = l2?.next;
         }
+        return dummyHead.next;
     }
 }
 
