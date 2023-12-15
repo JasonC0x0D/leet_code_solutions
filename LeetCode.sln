@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q1_two_sum", "q1_two_sum\q1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q3_longest_substring_without_repeating_characters", "q3_longest_substring_without_repeating_characters\q3_longest_substring_without_repeating_characters.csproj", "{A3B61390-E0D2-40A6-8C53-ED603A1547C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "q4_median_of_two_sorted_arrays", "q4_median_of_two_sorted_arrays\q4_median_of_two_sorted_arrays.csproj", "{6CB81B02-9BF5-46F2-85AF-8A2C135CADAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A3B61390-E0D2-40A6-8C53-ED603A1547C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3B61390-E0D2-40A6-8C53-ED603A1547C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3B61390-E0D2-40A6-8C53-ED603A1547C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CB81B02-9BF5-46F2-85AF-8A2C135CADAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CB81B02-9BF5-46F2-85AF-8A2C135CADAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CB81B02-9BF5-46F2-85AF-8A2C135CADAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CB81B02-9BF5-46F2-85AF-8A2C135CADAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
